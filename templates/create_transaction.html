@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Create Transaction
+    </title>
+</head>
+
+<body>
+    <h1>Create Transaction</h1>
+    <form action="/create" method="post">
+        <label for="amount">Amount</label>
+        <input type="number" name="amount" id="amount"  step="0.01" required>
+
+        <label for="category">Category</label>
+        <input type="text" name="category" id="category" required>
+
+        <button>Create</button>
+
+        <a href="/data">Cancel</a>
+
+    </form>
+
+</body>
+
+</html>

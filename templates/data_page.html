@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Finance Tracker</title>
+</head>
+
+<body>
+    <h1>Finance Tracker</h1>
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Category</th>
+            <th>Amount</th>
+        </tr>
+        {% for t in context %}
+        <tr>
+            <td>{{ t[4] }}</td>
+            <td>{{ t[3] }}</td>
+            <td>{{ "{:,.2f}".format(t[2] / 100) }}</td>
+        </tr>
+        {% else %}
+        <tr>
+            <td colspan="3">No transactions yet.</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/create">Create Transaction</a>
+    <form action="/logout">
+        <button>Logout</button>
+    </form>
+</body>
+
+</html>
